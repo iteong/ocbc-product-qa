@@ -8,6 +8,26 @@ note to every answer.
 > (Connect2OCBC), pulled 5 Oct 2026, which marks it *indicative and subject to change*. Rates and fees may be
 > outdated: don't rely on them. No customer data is used.
 
+![A cited answer: the 360 Account minimum balance, with source file and freshness note](docs/screenshots/answer.png)
+
+<details>
+<summary>More screenshots: refusal, stale data, evaluation</summary>
+
+**Refusing when the data doesn't cover it** (credit cards aren't in the data):
+
+![Not in the product data: OCBC 365 Credit Card annual fee](docs/screenshots/refusal.png)
+
+**Flagging stale data** (SIBOR has been discontinued):
+
+![SIBOR home loan rates with a stale-data warning](docs/screenshots/stale.png)
+
+**Evaluation tab:** retrieval metrics, then wrong answers and per-question results:
+
+![Evaluation: BM25 vs hybrid retrieval metrics](docs/screenshots/eval1.png)
+![Evaluation: wrong answers and per-question results](docs/screenshots/eval2.png)
+
+</details>
+
 ## How it works
 1. **Clean:** `scripts/clean_products.py` turns the raw API JSON in `data/ocbc_products/` into one schema in
    `data/products_clean/`, with a [data-quality report](data/products_clean/DATA_QUALITY.md).

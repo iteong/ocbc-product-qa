@@ -99,16 +99,25 @@ class _BrokenClient:
         raise RuntimeError("Anthropic client unavailable")
 
 
+def escape_dollars(text):
+    """Escape $ so Streamlit markdown doesn't render 'S$500 ... S$2' as a LaTeX formula.
+
+    Code spans are left alone (a backslash there would show literally), as is an already-escaped \\$.
+    """
+    parts = re.split(r"(`[^`]*`)", text)
+    return "".join(p if p.startswith("`") else re.sub(r"(?<!\\)\$", r"\\$", p) for p in parts)
+
+
 def render_citations_inline(text):
     """Show [chunk_id] citations as inline code so they stand out from the answer text."""
-    return re.sub(r"\[([^\[\]]+#[^\[\]]+)\]", r" `\1`", text)
+    return re.sub(r"\[([^\[\]]+#[^\[\]]+)\]", r" `\1`", escape_dollars(text))
 
 
 def render_freshness(note):
     """Freshness note: a warning box if any stale flag is present, otherwise an info box."""
     lines = note.split("\n")
     body = lines[0] + ("\n\n" + "\n".join(lines[1:]) if len(lines) > 1 else "")
-    (st.warning if "⚠" in note else st.info)(f"**Source & freshness**\n\n{body}")
+    (st.warning if "⚠" in note else st.info)(f"**Source & freshness**\n\n{escape_dollars(body)}")
 
 
 def hits_table(hits):
@@ -138,14 +147,15 @@ def render_result(result, k):
     if result["answer"]:
         st.markdown(render_citations_inline(result["answer"]))
     if result["refusal_reason"]:
-        st.markdown(f"**Not covered by the data:** {result['refusal_reason']}")
+        st.markdown(f"**Not covered by the data:** {escape_dollars(result['refusal_reason'])}")
     if result["status"] == "not_in_data":
         st.caption("Check ocbc.com or the product team. Don't answer the customer from memory.")
 
     if result["citations"]:
         st.markdown("**Cited sources**")
         for c in result["citations"]:
-            st.markdown(f"- {c['product_name']} · {c['section']} · `{c['chunk_id']}` · source file `{c['source_file']}`")
+            st.markdown(escape_dollars(f"- {c['product_name']} · {c['section']} · `{c['chunk_id']}` · "
+                                       f"source file `{c['source_file']}`"))
     if result["dropped_citations"]:
         st.caption(f"Removed citations not in the retrieved data: {result['dropped_citations']}")
     render_freshness(result["freshness_note"])
@@ -167,8 +177,8 @@ def render_fallback(result):
     st.markdown("The AI service didn't respond in time or returned an error. These are the product sections that "
                 "best match the question. Read them directly; nothing below was written by AI.")
     for sec in result["fallback_sections"]:
-        st.markdown(f"**{sec['product_name']} · {sec['section']}**  \n`{sec['chunk_id']}` · source file "
-                    f"`{sec['source_file']}`")
+        st.markdown(escape_dollars(f"**{sec['product_name']} · {sec['section']}**  \n`{sec['chunk_id']}` · "
+                                   f"source file `{sec['source_file']}`"))
         st.code(sec["text"], language=None, wrap_lines=True)
     render_freshness(result["freshness_note"])
     st.caption(f"AI answer unavailable ({result['error']}). Try again in a moment.")
