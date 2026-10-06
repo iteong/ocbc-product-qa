@@ -1,0 +1,106 @@
+id,type,retriever,first_rank,rr,product_hit@5,section_recall@5,top3,hit@1,hit@3,hit@5
+f01,factual,bm25,1.0,1.0,True,1.0,360-account#Minimum balance | frank-account#Minimum balance | bonus-plus-savings-account#Minimum balance,True,True,True
+f02,factual,bm25,1.0,1.0,True,1.0,bonus-plus-savings-account#Initial deposit | bonus-plus-savings-account#Fees and charges | bonus-plus-savings-account#Eligibility,True,True,True
+f03,factual,bm25,1.0,1.0,True,1.0,usd-current-account#Fees and charges | bonus-plus-savings-account#Fees and charges | usd-current-account#Description,True,True,True
+f04,factual,bm25,1.0,1.0,True,1.0,360-account#Eligibility | monthly-savings-account#Eligibility | 360-account#Minimum balance,True,True,True
+f05,factual,bm25,2.0,0.5,True,1.0,360-account#How to apply | monthly-savings-account#How to apply | monthly-savings-account#Eligibility,False,True,True
+f06,factual,bm25,,0.0,True,0.0,usd-current-account#Description | 360-account#Benefits | usd-current-account#Fees and charges,False,False,False
+f07,factual,bm25,1.0,1.0,True,1.0,home-loan-new-purchase#Loan amount | home-loan-new-purchase#Eligibility | home-loan-refinancing#Loan amount,True,True,True
+f08,factual,bm25,1.0,1.0,True,1.0,frank-account#Description | frank-account#Minimum balance | frank-account#Initial deposit,True,True,True
+p01,paraphrase,bm25,,0.0,False,0.0,frank-account#How to apply | unit-trusts#Overview | monthly-savings-account#Description,False,False,False
+p02,paraphrase,bm25,1.0,1.0,True,1.0,360-account#Benefits | bonus-plus-savings-account#Description | usd-current-account#Benefits,True,True,True
+p03,paraphrase,bm25,,0.0,True,0.0,360-account#Remarks | unit-trusts#Description | frank-account#Benefits,False,False,False
+p04,paraphrase,bm25,,0.0,True,0.0,monthly-savings-account#Eligibility | monthly-savings-account#How to apply | 360-account#How to apply,False,False,False
+p05,paraphrase,bm25,,0.0,True,0.0,home-loan-refinancing#Description | usd-current-account#Benefits | usd-current-account#Initial deposit,False,False,False
+p06,paraphrase,bm25,2.0,0.5,True,1.0,frank-account#Description | frank-account#Fees and charges | monthly-savings-account#Minimum balance,False,True,True
+p07,paraphrase,bm25,1.0,1.0,True,0.5,usd-current-account#Benefits | usd-current-account#Initial deposit | frank-account#How to apply,True,True,True
+p08,paraphrase,bm25,1.0,1.0,True,1.0,monthly-savings-account#Eligibility | frank-account#Eligibility | 360-account#Eligibility,True,True,True
+n01,numeric,bm25,1.0,1.0,True,1.0,time-deposit-fixed-deposit#Benefits | time-deposit-fixed-deposit#Benefits | time-deposit-fixed-deposit#Benefits,True,True,True
+n02,numeric,bm25,1.0,1.0,True,1.0,time-deposit-fixed-deposit#Benefits | home-loan-refinancing#Interest rates | time-deposit-fixed-deposit#Benefits,True,True,True
+n03,numeric,bm25,1.0,1.0,True,1.0,time-deposit-fixed-deposit#Benefits | monthly-savings-account#Description | time-deposit-fixed-deposit#Remarks,True,True,True
+n04,numeric,bm25,2.0,0.5,True,1.0,bonus-plus-savings-account#Description | bonus-plus-savings-account#Benefits | bonus-plus-savings-account#Initial deposit,False,True,True
+n05,numeric,bm25,3.0,0.3333333333333333,True,1.0,monthly-savings-account#Benefits | bonus-plus-savings-account#Benefits | 360-account#Benefits,False,True,True
+n06,numeric,bm25,1.0,1.0,True,1.0,frank-account#Benefits | 360-account#Benefits | frank-account#Fees and charges,True,True,True
+n07,numeric,bm25,1.0,1.0,True,1.0,unit-trusts#How it works | unit-trusts#Benefits | unit-trusts#Description,True,True,True
+n08,numeric,bm25,1.0,1.0,True,1.0,monthly-savings-account#Benefits | bonus-plus-savings-account#Benefits | monthly-savings-account#Benefits,True,True,True
+c01,cross_product,bm25,1.0,1.0,True,0.8333333333333334,360-account#Eligibility | monthly-savings-account#How to apply | bonus-plus-savings-account#How to apply,True,True,True
+c02,cross_product,bm25,2.0,0.5,True,0.5,frank-account#Eligibility | frank-account#Initial deposit | 360-account#How to apply,False,True,True
+c03,cross_product,bm25,1.0,1.0,True,1.0,bonus-plus-savings-account#Minimum balance | 360-account#Minimum balance | bonus-plus-savings-account#Initial deposit,True,True,True
+c04,cross_product,bm25,1.0,1.0,True,0.6666666666666666,frank-account#Eligibility | monthly-savings-account#Eligibility | 360-account#Eligibility,True,True,True
+c05,cross_product,bm25,1.0,1.0,True,1.0,home-loan-new-purchase#Loan amount | home-loan-refinancing#Loan amount | home-loan-new-purchase#Eligibility,True,True,True
+c06,cross_product,bm25,1.0,1.0,True,1.0,bonus-plus-savings-account#Fees and charges | usd-current-account#Fees and charges | 360-account#Fees and charges,True,True,True
+s01,stale,bm25,1.0,1.0,True,1.0,home-loan-refinancing#Interest rates | home-loan-new-purchase#Interest rates | home-loan-new-purchase#Description,True,True,True
+s02,stale,bm25,1.0,1.0,True,1.0,unit-trusts#Overview | unit-trusts#Benefits | unit-trusts#How to apply,True,True,True
+s03,stale,bm25,1.0,1.0,True,1.0,home-loan-new-purchase#Interest rates | home-loan-new-purchase#Description | home-loan-refinancing#Interest rates,True,True,True
+s04,stale,bm25,1.0,1.0,True,1.0,time-deposit-fixed-deposit#Benefits | time-deposit-fixed-deposit#Benefits | home-loan-refinancing#Interest rates,True,True,True
+s05,stale,bm25,2.0,0.5,True,1.0,global-savings-account#Benefits | time-deposit-fixed-deposit#Benefits | usd-current-account#Initial deposit,False,True,True
+f01,factual,hybrid,1.0,1.0,True,1.0,360-account#Minimum balance | frank-account#Minimum balance | bonus-plus-savings-account#Minimum balance,True,True,True
+f02,factual,hybrid,1.0,1.0,True,1.0,bonus-plus-savings-account#Initial deposit | bonus-plus-savings-account#Fees and charges | bonus-plus-savings-account#Description,True,True,True
+f03,factual,hybrid,1.0,1.0,True,1.0,usd-current-account#Fees and charges | usd-current-account#Description | bonus-plus-savings-account#Fees and charges,True,True,True
+f04,factual,hybrid,2.0,0.5,True,1.0,360-account#Minimum balance | 360-account#Eligibility | frank-account#Description,False,True,True
+f05,factual,hybrid,2.0,0.5,True,1.0,360-account#How to apply | monthly-savings-account#How to apply | 360-account#How to apply,False,True,True
+f06,factual,hybrid,3.0,0.3333333333333333,True,1.0,usd-current-account#Description | usd-current-account#Fees and charges | usd-current-account#Benefits,False,True,True
+f07,factual,hybrid,1.0,1.0,True,1.0,home-loan-new-purchase#Loan amount | home-loan-refinancing#Loan amount | home-loan-new-purchase#Eligibility,True,True,True
+f08,factual,hybrid,1.0,1.0,True,1.0,frank-account#Description | frank-account#Minimum balance | frank-account#Eligibility,True,True,True
+p01,paraphrase,hybrid,,0.0,False,0.0,bonus-plus-savings-account#Description | monthly-savings-account#Description | monthly-savings-account#Benefits,False,False,False
+p02,paraphrase,hybrid,1.0,1.0,True,1.0,360-account#Benefits | usd-current-account#Benefits | bonus-plus-savings-account#Description,True,True,True
+p03,paraphrase,hybrid,,0.0,True,0.0,360-account#Remarks | 360-account#Initial deposit | 360-account#How to apply,False,False,False
+p04,paraphrase,hybrid,3.0,0.3333333333333333,True,0.5,global-savings-account#Benefits | monthly-savings-account#Initial deposit | global-savings-account#Description,False,True,True
+p05,paraphrase,hybrid,,0.0,True,0.0,home-loan-new-purchase#Description | home-loan-refinancing#Description | usd-current-account#Benefits,False,False,False
+p06,paraphrase,hybrid,1.0,1.0,True,1.0,frank-account#Fees and charges | monthly-savings-account#Minimum balance | bonus-plus-savings-account#Minimum balance,True,True,True
+p07,paraphrase,hybrid,1.0,1.0,True,0.5,usd-current-account#Benefits | usd-current-account#Initial deposit | global-savings-account#Benefits,True,True,True
+p08,paraphrase,hybrid,1.0,1.0,True,1.0,monthly-savings-account#Eligibility | monthly-savings-account#Minimum balance | monthly-savings-account#Initial deposit,True,True,True
+n01,numeric,hybrid,5.0,0.2,True,1.0,360-account#Benefits | monthly-savings-account#Benefits | bonus-plus-savings-account#Description,False,False,True
+n02,numeric,hybrid,3.0,0.3333333333333333,True,1.0,home-loan-refinancing#Interest rates | home-loan-new-purchase#Interest rates | time-deposit-fixed-deposit#Benefits,False,True,True
+n03,numeric,hybrid,,0.0,True,0.0,360-account#Description | time-deposit-fixed-deposit#Remarks | 360-account#Benefits,False,False,False
+n04,numeric,hybrid,3.0,0.3333333333333333,True,1.0,bonus-plus-savings-account#Description | bonus-plus-savings-account#Initial deposit | bonus-plus-savings-account#Benefits,False,True,True
+n05,numeric,hybrid,4.0,0.25,True,1.0,monthly-savings-account#Benefits | bonus-plus-savings-account#Minimum balance | bonus-plus-savings-account#Benefits,False,False,True
+n06,numeric,hybrid,1.0,1.0,True,1.0,frank-account#Benefits | 360-account#Benefits | frank-account#Fees and charges,True,True,True
+n07,numeric,hybrid,1.0,1.0,True,1.0,unit-trusts#How it works | unit-trusts#Description | unit-trusts#Benefits,True,True,True
+n08,numeric,hybrid,1.0,1.0,True,1.0,monthly-savings-account#Benefits | bonus-plus-savings-account#Benefits | monthly-savings-account#Description,True,True,True
+c01,cross_product,hybrid,1.0,1.0,True,0.5,360-account#Eligibility | monthly-savings-account#How to apply | bonus-plus-savings-account#How to apply,True,True,True
+c02,cross_product,hybrid,1.0,1.0,True,1.0,frank-account#Initial deposit | 360-account#Initial deposit | monthly-savings-account#Initial deposit,True,True,True
+c03,cross_product,hybrid,1.0,1.0,True,1.0,bonus-plus-savings-account#Minimum balance | 360-account#Minimum balance | monthly-savings-account#Minimum balance,True,True,True
+c04,cross_product,hybrid,1.0,1.0,True,1.0,monthly-savings-account#Eligibility | frank-account#Eligibility | 360-account#Eligibility,True,True,True
+c05,cross_product,hybrid,1.0,1.0,True,1.0,home-loan-refinancing#Loan amount | home-loan-new-purchase#Loan amount | home-loan-refinancing#Description,True,True,True
+c06,cross_product,hybrid,1.0,1.0,True,1.0,usd-current-account#Fees and charges | bonus-plus-savings-account#Fees and charges | frank-account#Fees and charges,True,True,True
+s01,stale,hybrid,2.0,0.5,True,1.0,home-loan-new-purchase#Description | home-loan-refinancing#Interest rates | home-loan-new-purchase#Interest rates,False,True,True
+s02,stale,hybrid,1.0,1.0,True,1.0,unit-trusts#Overview | unit-trusts#How to apply | unit-trusts#Description,True,True,True
+s03,stale,hybrid,2.0,0.5,True,1.0,home-loan-new-purchase#Description | home-loan-new-purchase#Interest rates | home-loan-refinancing#Interest rates,False,True,True
+s04,stale,hybrid,,0.0,False,0.0,home-loan-new-purchase#Interest rates | home-loan-refinancing#Interest rates | bonus-plus-savings-account#Initial deposit,False,False,False
+s05,stale,hybrid,4.0,0.25,True,1.0,global-savings-account#Benefits | usd-current-account#Benefits | usd-current-account#Initial deposit,False,False,True
+f01,factual,embedding,1.0,1.0,True,1.0,360-account#Minimum balance | frank-account#Minimum balance | bonus-plus-savings-account#Minimum balance,True,True,True
+f02,factual,embedding,1.0,1.0,True,1.0,bonus-plus-savings-account#Initial deposit | monthly-savings-account#Initial deposit | bonus-plus-savings-account#Description,True,True,True
+f03,factual,embedding,1.0,1.0,True,1.0,usd-current-account#Fees and charges | usd-current-account#Description | bonus-plus-savings-account#Fees and charges,True,True,True
+f04,factual,embedding,5.0,0.2,True,1.0,360-account#Minimum balance | frank-account#Description | frank-account#Eligibility,False,False,True
+f05,factual,embedding,1.0,1.0,True,1.0,monthly-savings-account#How to apply | 360-account#How to apply | monthly-savings-account#Initial deposit,True,True,True
+f06,factual,embedding,3.0,0.3333333333333333,True,1.0,usd-current-account#Fees and charges | usd-current-account#Description | usd-current-account#Benefits,False,True,True
+f07,factual,embedding,2.0,0.5,True,1.0,home-loan-refinancing#Loan amount | home-loan-new-purchase#Loan amount | home-loan-new-purchase#Description,False,True,True
+f08,factual,embedding,1.0,1.0,True,1.0,frank-account#Description | frank-account#Eligibility | frank-account#Minimum balance,True,True,True
+p01,paraphrase,embedding,,0.0,False,0.0,bonus-plus-savings-account#Description | bonus-plus-savings-account#Initial deposit | monthly-savings-account#Description,False,False,False
+p02,paraphrase,embedding,1.0,1.0,True,1.0,360-account#Benefits | usd-current-account#Benefits | usd-current-account#Initial deposit,True,True,True
+p03,paraphrase,embedding,2.0,0.5,True,0.3333333333333333,360-account#Remarks | bonus-plus-savings-account#Description | bonus-plus-savings-account#Initial deposit,False,True,True
+p04,paraphrase,embedding,1.0,1.0,True,0.5,global-savings-account#Description | monthly-savings-account#Initial deposit | bonus-plus-savings-account#Initial deposit,True,True,True
+p05,paraphrase,embedding,2.0,0.5,True,1.0,home-loan-new-purchase#Description | home-loan-refinancing#Loan amount | 360-account#Remarks,False,True,True
+p06,paraphrase,embedding,1.0,1.0,True,1.0,frank-account#Fees and charges | bonus-plus-savings-account#Minimum balance | usd-current-account#Minimum balance,True,True,True
+p07,paraphrase,embedding,1.0,1.0,True,1.0,usd-current-account#Description | usd-current-account#Benefits | usd-current-account#Initial deposit,True,True,True
+p08,paraphrase,embedding,1.0,1.0,True,1.0,monthly-savings-account#Eligibility | monthly-savings-account#Minimum balance | bonus-plus-savings-account#Initial deposit,True,True,True
+n01,numeric,embedding,,0.0,True,0.0,360-account#Benefits | time-deposit-fixed-deposit#Remarks | home-loan-new-purchase#Interest rates,False,False,False
+n02,numeric,embedding,,0.0,False,0.0,home-loan-new-purchase#Interest rates | home-loan-refinancing#Interest rates | 360-account#Benefits,False,False,False
+n03,numeric,embedding,,0.0,True,0.0,360-account#Description | time-deposit-fixed-deposit#Remarks | 360-account#Benefits,False,False,False
+n04,numeric,embedding,4.0,0.25,True,1.0,bonus-plus-savings-account#Description | monthly-savings-account#Benefits | bonus-plus-savings-account#Initial deposit,False,False,True
+n05,numeric,embedding,,0.0,True,0.0,monthly-savings-account#Benefits | bonus-plus-savings-account#Minimum balance | bonus-plus-savings-account#Description,False,False,False
+n06,numeric,embedding,1.0,1.0,True,1.0,frank-account#Benefits | 360-account#Benefits | monthly-savings-account#Benefits,True,True,True
+n07,numeric,embedding,1.0,1.0,True,1.0,unit-trusts#How it works | unit-trusts#Description | unit-trusts#Benefits,True,True,True
+n08,numeric,embedding,1.0,1.0,True,1.0,monthly-savings-account#Benefits | bonus-plus-savings-account#Description | monthly-savings-account#Description,True,True,True
+c01,cross_product,embedding,2.0,0.5,True,0.5,360-account#How to apply | 360-account#Eligibility | 360-account#How to apply,False,True,True
+c02,cross_product,embedding,1.0,1.0,True,1.0,frank-account#Initial deposit | 360-account#Initial deposit | monthly-savings-account#Initial deposit,True,True,True
+c03,cross_product,embedding,1.0,1.0,True,1.0,bonus-plus-savings-account#Minimum balance | monthly-savings-account#Minimum balance | 360-account#Minimum balance,True,True,True
+c04,cross_product,embedding,1.0,1.0,True,1.0,monthly-savings-account#Eligibility | frank-account#Description | frank-account#Eligibility,True,True,True
+c05,cross_product,embedding,1.0,1.0,True,1.0,home-loan-refinancing#Loan amount | home-loan-refinancing#Description | home-loan-new-purchase#Description,True,True,True
+c06,cross_product,embedding,1.0,1.0,True,1.0,usd-current-account#Fees and charges | frank-account#Fees and charges | bonus-plus-savings-account#Fees and charges,True,True,True
+s01,stale,embedding,2.0,0.5,True,1.0,home-loan-new-purchase#Description | home-loan-new-purchase#Interest rates | home-loan-refinancing#Interest rates,False,True,True
+s02,stale,embedding,2.0,0.5,True,1.0,unit-trusts#How to apply | unit-trusts#Overview | unit-trusts#Description,False,True,True
+s03,stale,embedding,2.0,0.5,True,1.0,home-loan-new-purchase#Description | home-loan-new-purchase#Interest rates | home-loan-refinancing#Interest rates,False,True,True
+s04,stale,embedding,,0.0,True,0.0,home-loan-new-purchase#Interest rates | home-loan-refinancing#Interest rates | time-deposit-fixed-deposit#Remarks,False,False,False
+s05,stale,embedding,,0.0,False,0.0,global-savings-account#Benefits | usd-current-account#Benefits | usd-current-account#Fees and charges,False,False,False
